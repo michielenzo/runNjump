@@ -1,0 +1,310 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://scenes/MainScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/clouds.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sounds/jumpsound.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/scream.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/environment tiles/1.png" type="Texture" id=6]
+[ext_resource path="res://assets/environment tiles/2.png" type="Texture" id=7]
+[ext_resource path="res://assets/environment tiles/11.png" type="Texture" id=8]
+[ext_resource path="res://assets/environment tiles/12.png" type="Texture" id=9]
+[ext_resource path="res://assets/environment tiles/13.png" type="Texture" id=10]
+[ext_resource path="res://assets/environment tiles/14.png" type="Texture" id=11]
+[ext_resource path="res://assets/environment tiles/15.png" type="Texture" id=12]
+[ext_resource path="res://assets/environment tiles/16.png" type="Texture" id=13]
+[ext_resource path="res://assets/environment tiles/17.png" type="Texture" id=14]
+[ext_resource path="res://assets/environment tiles/18.png" type="Texture" id=15]
+[ext_resource path="res://assets/environment tiles/3.png" type="Texture" id=16]
+[ext_resource path="res://assets/environment tiles/4.png" type="Texture" id=17]
+[ext_resource path="res://assets/environment tiles/5.png" type="Texture" id=18]
+[ext_resource path="res://assets/environment tiles/6.png" type="Texture" id=19]
+[ext_resource path="res://assets/environment tiles/7.png" type="Texture" id=20]
+[ext_resource path="res://assets/environment tiles/8.png" type="Texture" id=21]
+[ext_resource path="res://assets/environment tiles/9.png" type="Texture" id=22]
+[ext_resource path="res://assets/environment tiles/10.png" type="Texture" id=23]
+[ext_resource path="res://scenes/TileMap.gd" type="Script" id=24]
+[ext_resource path="res://scenes/Menu.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/GameOverScreen.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/fonts/Schwarzenberg.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://scenes/ScoreCounter.gd" type="Script" id=28]
+
+[sub_resource type="TileSet" id=1]
+0/name = "1.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 130, 130 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "2.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 130, 130 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "3.png 2"
+2/texture = ExtResource( 16 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 130, 130 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "4.png 3"
+3/texture = ExtResource( 17 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 130, 130 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+4/name = "5.png 4"
+4/texture = ExtResource( 18 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 130, 130 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [  ]
+4/z_index = 0
+5/name = "6.png 5"
+5/texture = ExtResource( 19 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 130, 130 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [  ]
+5/z_index = 0
+6/name = "7.png 6"
+6/texture = ExtResource( 20 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 130, 130 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [  ]
+6/z_index = 0
+7/name = "8.png 7"
+7/texture = ExtResource( 21 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 130, 130 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [  ]
+7/z_index = 0
+8/name = "9.png 8"
+8/texture = ExtResource( 22 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 130, 130 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [  ]
+8/z_index = 0
+9/name = "10.png 9"
+9/texture = ExtResource( 23 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 130, 130 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shapes = [  ]
+9/z_index = 0
+10/name = "11.png 10"
+10/texture = ExtResource( 8 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 130, 130 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shapes = [  ]
+10/z_index = 0
+11/name = "12.png 11"
+11/texture = ExtResource( 9 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 130, 130 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shapes = [  ]
+11/z_index = 0
+12/name = "13.png 12"
+12/texture = ExtResource( 10 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 130, 90 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shapes = [  ]
+12/z_index = 0
+13/name = "14.png 13"
+13/texture = ExtResource( 11 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 130, 100 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shapes = [  ]
+13/z_index = 0
+14/name = "15.png 14"
+14/texture = ExtResource( 12 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 130, 100 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shapes = [  ]
+14/z_index = 0
+15/name = "16.png 15"
+15/texture = ExtResource( 13 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 130, 130 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shapes = [  ]
+15/z_index = 0
+16/name = "17.png 16"
+16/texture = ExtResource( 14 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 130, 100 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shapes = [  ]
+16/z_index = 0
+17/name = "18.png 17"
+17/texture = ExtResource( 15 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 130, 130 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shapes = [  ]
+17/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 750, 62.5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 27 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 27 )
+
+[node name="MainNode" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+modulate = Color( 0.580392, 0.580392, 0.580392, 1 )
+position = Vector2( 1150, 60 )
+scale = Vector2( 1.5651, 1.56481 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 215.051, 550.44 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="JumpSoundPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 4 )
+
+[node name="ScreamSoundPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 5 )
+volume_db = -7.789
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 650 )
+scale = Vector2( 0.8, 0.8 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 10, 10 )
+cell_quadrant_size = 10
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -393216, 1, 0, -393203, 1, 0, -393190, 1, 0, -393177, 1, 0, -393176, 1, 0, -393163, 1, 0, -393150, 1, 0, -393137, 1, 0, -393124, 1, 0, -393111, 1, 0, -393098, 1, 0, -393085, 1, 0, -393072, 1, 0 )
+script = ExtResource( 24 )
+
+[node name="TileMapHitbox" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 650 )
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionRectangle" type="CollisionShape2D" parent="TileMapHitbox"]
+position = Vector2( 750, 2.5 )
+shape = SubResource( 3 )
+
+[node name="Menu" parent="." instance=ExtResource( 25 )]
+
+[node name="ObstacleSpawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="TimerExponential" type="Timer" parent="ObstacleSpawnTimer"]
+wait_time = 20.0
+
+[node name="GameOverScreen" parent="." instance=ExtResource( 26 )]
+visible = false
+
+[node name="HUD" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ScoreCounter" type="Label" parent="HUD"]
+editor/display_folded = true
+margin_left = 580.0
+margin_top = 40.0
+margin_right = 600.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+script = ExtResource( 28 )
+
+[node name="ScoreTimer" type="Timer" parent="HUD/ScoreCounter"]
+wait_time = 0.15
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 60.0
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 4 )
+text = "Level: unknown"
+[connection signal="game_over" from="Player" to="." method="_on_game_over"]
+[connection signal="area_entered" from="TileMapHitbox" to="Player" method="_on_floor_collision"]
+[connection signal="start_game" from="Menu" to="." method="_on_Menu_start_game"]
+[connection signal="timeout" from="ObstacleSpawnTimer" to="." method="_on_ObstacleSpawnTimer_timeout"]
+[connection signal="timeout" from="ObstacleSpawnTimer/TimerExponential" to="." method="_on_TimerExponential_timeout"]
+[connection signal="timeout" from="HUD/ScoreCounter/ScoreTimer" to="HUD/ScoreCounter" method="_on_ScoreTimer_timeout"]

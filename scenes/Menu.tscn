@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Schwarzenberg.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/American Captain.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 52
+outline_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 93
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.5072
+margin_top = -3.01471
+margin_right = -1.5072
+margin_bottom = -3.01471
+script = ExtResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 494.457
+margin_top = 255.928
+margin_right = 702.457
+margin_bottom = 295.928
+custom_fonts/font = SubResource( 3 )
+text = "press space to jump"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 514.442
+margin_top = 383.015
+margin_right = 677.442
+margin_bottom = 441.015
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Start game"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 466.501
+margin_top = 95.033
+margin_right = 729.501
+margin_bottom = 189.033
+custom_fonts/font = SubResource( 2 )
+text = "Run N Jump"
+align = 1
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
