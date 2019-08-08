@@ -7,7 +7,7 @@ var obstacle_x_offset = 400
 var screen_width
 var gameOver = false
 var wait_time_modulo = 4
-var speed_up_spawner = 0
+var obstacle_spawn_time_reduction = 0
 var score = 0
 
 enum Obstacles{CACTUS, BIRD}
@@ -27,22 +27,13 @@ func _on_game_over():
 		$HUD/ScoreCounter.score = 0
 		$Player/AnimatedSprite.frames.set_animation_speed("running", 10)
 
-func _on_TimerExponential_timeout():
-	if speed_up_spawner == 0:
-		speed_up_spawner = 1
-	elif speed_up_spawner == 1:
-		speed_up_spawner = 1.5
-	elif speed_up_spawner == 1.5:
-		speed_up_spawner = 2
-	elif speed_up_spawner == 2:
-		speed_up_spawner = 2.3		
-		$ObstacleSpawnTimer/TimerExponential.stop()	
-	print("spawn speed increased")
+func _on_LevelManager_level_up(level):
+	obstacle_spawn_time_reduction = $LevelManager.level_settings[level].obstacle_spawn_time_reduction
 
 func _on_ObstacleSpawnTimer_timeout():
 	var wait_time_offset_variation = 5
 	var wait_time_minimum = 2.5
-	var random_wait_time = (randi() % wait_time_offset_variation + wait_time_minimum) - speed_up_spawner
+	var random_wait_time = (randi() % wait_time_offset_variation + wait_time_minimum) - obstacle_spawn_time_reduction
 	print(random_wait_time)
 	$ObstacleSpawnTimer.stop()
 	$ObstacleSpawnTimer.wait_time = random_wait_time
@@ -57,7 +48,8 @@ func spawn_obstacle():
 		spawn_bird()
 
 func spawn_bird():
-	for i in range(3):
+	var n_birds = $LevelManager.level_settings[$LevelManager.level].birds_in_bird_flock
+	for i in range(n_birds):
 		var bird = bird_scene.instance()
 		var rand_height_diff = randi() % 20 + 20
 		var rand_x_diff = 100 - randi() % 200
@@ -78,10 +70,9 @@ func spawn_cactus():
 
 func _on_Menu_start_game():
 	$ObstacleSpawnTimer.start()
-	$ObstacleSpawnTimer/TimerExponential.start()
 	$HUD/ScoreCounter/ScoreTimer.start()
 	$HUD.show()
 	$Player.game_started = true
 	$TileMap.game_started = true
+	$LevelManager.game_started = true
 	spawn_obstacle()
-	pass 
